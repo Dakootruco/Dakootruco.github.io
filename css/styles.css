@@ -1,0 +1,40 @@
+/* Estilo básico del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Estilo de la barra de navegación */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+}
+
+/* Estilo del contenido de la página */
+.container {
+    padding-top: 20px;
+}
+
+h1 {
+    color: #212529;
+}
+
+p {
+    color: #212529;
+    line-height: 1.6;
+}
+
+/* Adaptación para diferentes dispositivos */
+@media (max-width: 992px) {
+    .navbar {
+        text-align: center;
+    }
+}
