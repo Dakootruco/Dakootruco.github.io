@@ -1,90 +1,78 @@
-/* Reset básico y estilos globales */
-body, html {
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    position: relative;
 }
 
-/* Estilo de la barra de navegación */
+/* Estilos para la barra de navegación */
 .navbar {
     background-color: #343a40;
-    border-top: 3px solid #007bff;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 .navbar-brand, .navbar-nav .nav-link {
     color: #fff;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #007bff;
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Opacidad al pasar el mouse */
 }
 
 /* Estilo del contenido principal */
 .container {
     padding: 2rem;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 4rem; /* Espacio para la barra de navegación */
+    background-color: #fff; /* Fondo blanco para los contenidos */
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
 }
 
 h1 {
-    color: #007bff;
-    font-size: 2.5rem;
+    color: #007bff; /* Azul suave para títulos */
 }
 
 p {
-    font-size: 1.2rem;
-    line-height: 1.5;
+    color: #666; /* Gris para texto */
+    line-height: 1.6;
 }
 
-/* Responsive design para ajustar elementos en dispositivos más pequeños */
-@media (max-width: 992px) {
-    .navbar {
-        text-align: center;
-    }
+/* Estilos para el formulario */
+form {
+    background-color: #fff; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espacio interno para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar el formulario */
+    width: 100%; /* Ancho completo dentro de su contenedor */
+    max-width: 500px; /* Máximo ancho del formulario */
+    margin: 20px auto; /* Centrado con espacio arriba y abajo */
 }
 
-/* Estilo para animar los botones de la barra de navegación */
-.navbar-nav .nav-link {
-    color: #fff;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Ancho completo para ocupar el formulario */
+    padding: 10px; /* Espacio interno para escribir cómodamente */
+    margin-top: 8px; /* Margen superior para separar los campos */
+    margin-bottom: 16px; /* Margen inferior para separar los campos */
+    border-radius: 4px; /* Bordes redondeados ligeramente */
+    border: 1px solid #ccc; /* Borde sutil */
+    box-sizing: border-box; /* Ajuste de caja para incluir padding en el ancho */
 }
 
-.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
-    color: #007bff; /* Cambio de color al pasar el mouse */
-    background-color: rgba(255, 255, 255, 0.1); /* Ligero fondo al pasar el mouse */
-    border-radius: 5px; /* Bordes redondeados para el efecto hover */
+input[type="submit"] {
+    background-color: #007bff; /* Color azul para el botón de envío */
+    color: white; /* Texto blanco para contraste */
+    padding: 10px 20px; /* Espacio interno suficiente para hacerlo notorio */
+    border: none; /* Sin borde para un look más limpio */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero para indicar que es clickeable */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
 }
 
-/* Opcional: Animación de botones en general (aplicable a cualquier botón) */
-button {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    outline: none; /* Remover el borde al hacer clic */
-}
-
-button:hover {
-    background-color: #007bff; /* Cambio de color de fondo al pasar el mouse */
-    transform: scale(1.05); /* Ligero aumento de tamaño al pasar el mouse */
-}
-
-.navbar-nav .button {
-    background-color: #007bff; /* Fondo azul para el botón */
-    color: white;
-    padding: 0.5rem 1rem; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Transición suave del fondo */
-}
-
-.navbar-nav .button:hover {
+input[type="submit"]:hover {
     background-color: #0056b3; /* Cambio de color al pasar el mouse */
+}
+
+label {
+    font-weight: bold; /* Texto en negrita para las etiquetas */
 }

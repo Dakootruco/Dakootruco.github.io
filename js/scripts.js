@@ -1,17 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Ejemplo de animación interactiva: Rotar botones al hacer clic
-    const buttons = document.querySelectorAll('button');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Rotación suave de 360 grados
-            this.style.transition = 'transform 0.5s';
-            this.style.transform = 'rotate(360deg)';
+    navLinks.forEach(link => {
+        link.addEventListener('mouseover', function() {
+            this.style.opacity = '0.7'; // Reducir la opacidad al pasar el mouse
+        });
 
-            // Restablecer la transformación después de completarla
-            setTimeout(() => {
-                this.style.transform = 'none';
-            }, 500);
+        link.addEventListener('mouseout', function() {
+            this.style.opacity = '1'; // Restaurar la opacidad al quitar el mouse
         });
     });
 });
