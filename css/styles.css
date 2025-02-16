@@ -77,3 +77,14 @@ button:hover {
     transform: scale(1.05); /* Ligero aumento de tamaño al pasar el mouse */
 }
 
+.navbar-nav .button {
+    background-color: #007bff; /* Fondo azul para el botón */
+    color: white;
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave del fondo */
+}
+
+.navbar-nav .button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+}
